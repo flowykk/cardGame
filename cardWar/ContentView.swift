@@ -9,14 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var playerCard = "card5"
-    @State private var cpuCard = "card2"
-    @State private var playerScore = 0
-    @State private var cpuScore = 0
+    @State private var playerCard = Constants.defaultCard
+    @State private var cpuCard = Constants.defaultCard
+    @State private var playerScore = Constants.defaultScore
+    @State private var computerScore = Constants.defaultScore
     
     var body: some View {
         ZStack {
-            Image("background")
+            Image(Constants.backgroundImage)
                 .ignoresSafeArea()
             VStack {
                 Spacer()
@@ -24,32 +24,32 @@ struct ContentView: View {
                     Spacer()
                     Image(playerCard)
                         .resizable()
-                        .frame(width: 156, height: 222)
+                        .frame(width: Constants.cardWidth, height: Constants.cardheight)
                     Spacer()
                     Image(cpuCard)
                         .resizable()
-                        .frame(width: 156, height: 222)
+                        .frame(width: Constants.cardWidth, height: Constants.cardheight)
                     Spacer()
                 }
-                .padding(.top, 130.0)
+                .padding(.top, Constants.topPadding)
                 Spacer()
                 Button(action: {
-                    let playerRand = Int.random(in: 2...13)
-                    let cpuRand = Int.random(in: 2...13)
+                    let playerRand = Int.random(in: Constants.minCardValue...Constants.maxCardValue)
+                    let cpuRand = Int.random(in: Constants.minCardValue...Constants.maxCardValue)
                     
-                    playerCard = "card" + String(playerRand)
-                    cpuCard = "card" + String(cpuRand)
+                    playerCard = Constants.defaultCardName + String(playerRand)
+                    cpuCard = Constants.defaultCardName + String(cpuRand)
                     
                     if playerRand > cpuRand {
-                        playerScore += 1
+                        playerScore += Constants.scoreIncrement
                     } else if playerRand < cpuRand{
-                        cpuScore += 1
+                        computerScore += Constants.scoreIncrement
                     }
                 },
                        label: {
-                    Label("Play", systemImage: "play")
+                    Label(Constants.playButtonLabel, systemImage: Constants.playImageSystemName)
                         .font(.title2)
-                        .frame(width: 130, height: 40)
+                        .frame(width: Constants.labelsWidth, height: Constants.labelsHeight)
                         
                 })
                 .buttonStyle(.borderedProminent)
@@ -58,10 +58,10 @@ struct ContentView: View {
                 HStack {
                     Spacer()
                     VStack {
-                        Text("Player")
+                        Text(Constants.playerName)
                             .fontWeight(.bold)
                             .foregroundColor(Color.white)
-                            .padding(.bottom, 7)
+                            .padding(.bottom, Constants.playerBottomPadding)
                         Text(String(playerScore))
                             .font(.largeTitle)
                             .fontWeight(.bold)
@@ -69,11 +69,11 @@ struct ContentView: View {
                     }
                     Spacer()
                     VStack {
-                        Text("CPU")
+                        Text(Constants.comuterName)
                             .fontWeight(.bold)
                             .foregroundColor(Color.white)
-                            .padding(.bottom, 7)
-                        Text(String(cpuScore))
+                            .padding(.bottom, Constants.playerBottomPadding)
+                        Text(String(computerScore))
                             .font(.largeTitle)
                             .fontWeight(.bold)
                             .foregroundColor(Color.white)

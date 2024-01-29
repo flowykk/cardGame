@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DB85FA42B68312A00483D80 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB85FA32B68312A00483D80 /* Constans.swift */; };
 		83DB682D2AE03A6C0043C52A /* cardWarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB682C2AE03A6C0043C52A /* cardWarApp.swift */; };
 		83DB682F2AE03A6C0043C52A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB682E2AE03A6C0043C52A /* ContentView.swift */; };
 		83DB68312AE03A710043C52A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83DB68302AE03A710043C52A /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DB85FA32B68312A00483D80 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		83DB68292AE03A6C0043C52A /* cardWar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cardWar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DB682C2AE03A6C0043C52A /* cardWarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardWarApp.swift; sourceTree = "<group>"; };
 		83DB682E2AE03A6C0043C52A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				83DB682C2AE03A6C0043C52A /* cardWarApp.swift */,
 				83DB682E2AE03A6C0043C52A /* ContentView.swift */,
+				0DB85FA32B68312A00483D80 /* Constans.swift */,
 				83DB68302AE03A710043C52A /* Assets.xcassets */,
 				83DB68322AE03A710043C52A /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				83DB682F2AE03A6C0043C52A /* ContentView.swift in Sources */,
 				83DB682D2AE03A6C0043C52A /* cardWarApp.swift in Sources */,
+				0DB85FA42B68312A00483D80 /* Constans.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
